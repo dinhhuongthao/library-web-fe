@@ -1,0 +1,22 @@
+CREATE SCHEMA `jdbc_lib` ;
+
+CREATE TABLE `jdbc_lib`.`book` (
+  `bookcode` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `author` VARCHAR(45) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
+  `releaseDate` DATE NOT NULL,
+  `numOfPages` INT NOT NULL,
+  `imageName` VARCHAR(255) NULL,
+  PRIMARY KEY (`bookcode`),
+  UNIQUE INDEX `id_UNIQUE` (`bookcode` ASC) VISIBLE);
+
+CREATE TABLE `jdbc_lib`.`user` (
+  `id` INT NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  `phone` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE);
